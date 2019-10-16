@@ -1,0 +1,44 @@
+{
+    "moods": [
+        {
+            "word": "Happy",
+            "emoji": "😂"
+        },
+        {
+            "word": "Exciting",
+            "emoji": "😧"
+        },
+        {
+            "word": "Inspiring",
+            "emoji": "😃"
+        },
+        {
+            "word": "Romantic",
+            "emoji": "😍"
+        },
+        {
+            "word": "Mysterious",
+            "emoji": "👹"
+        },
+        {
+            "word": "Puzzling",
+            "emoji": "🤔"
+        },
+        {
+            "word": "Sad",
+            "emoji": "😢"
+        },
+        {
+            "word": "Happy",
+            "emoji": "😁"
+        },
+        {
+            "word": "Scary",
+            "emoji": "😱"
+        },
+        {
+            "word": "Unpredictable",
+            "emoji": "😲"
+        }
+    ]
+}

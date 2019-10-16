@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import Enjoy from './components/Enjoy'
+import Mood from './components/Mood'
+import TextReview from './components/TextReview'
+import Recap from './components/Recap'
+import Thanks from './components/Thanks'
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
 
-function App() {
+const Root = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Route exact path="/" component={Enjoy} />
+      <Route exact path="/mood" component={Mood} />
+      <Route exact path="/textReview" component={TextReview} />
+      <Route exact path="/submit" component={Recap} />
+      <Route exact path="/thanks" component={Thanks} />
+    </Router>
   );
+
 }
 
-export default App;
+export default Root;

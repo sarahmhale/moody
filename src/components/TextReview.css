@@ -1,0 +1,9 @@
+.review-input{
+    margin: 10% 0 0 0;
+    padding:10px;
+    width: 90%;
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid#868686;
+    outline:none;
+}
