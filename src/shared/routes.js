@@ -1,3 +1,8 @@
+//Overall routes
+export const THANKS = "/thanks"
+export const START = "/"
+export const MIDDLE = "/middle"
+
 //Version 1 
 export const VERSION1_STAR = "/version1_starrating"
 export const VERSION1_MOOD = "/version1_mood"

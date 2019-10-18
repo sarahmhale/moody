@@ -28,7 +28,6 @@ class Recap extends Component {
     render() {
         return (
             <div className="container">
-
                 <div className="data-container" style={{ "marginTop": "30px" }}>
                     <h1>Recap</h1>
                     <StarRating rating={this.props.review.starRating} style={{ "marginTop": "40px" }} />
@@ -41,7 +40,6 @@ class Recap extends Component {
                 <div className="button-container">
                     <Button
                         value="Submit"
-                        onClick={this.props.submitReview(this.props.review)}
                         path="/thanks" />
                 </div>
             </div >
@@ -51,7 +49,6 @@ class Recap extends Component {
 
 
 const mapStateToProps = state => {
-    console.log(state.review1)
     const { data } = state
     return { review: data.review1 }
 }

@@ -1,22 +1,22 @@
 import React from 'react';
 import Button from '../shared/components/Button/Button'
-import { VERSION1_STAR } from '../shared/routes'
+import { VERSION2_STAR } from '../shared/routes'
 
 
-const Start = () => {
+const Middle = () => {
     return (
         <div className="container">
             <div className="data-container">
-                <h1> Version 1 </h1>
+                <h1> Version 2 </h1>
             </div>
             <div className="button-container">
                 <Button
                     value="Start Test"
-                    path={VERSION1_STAR}
+                    path={VERSION2_STAR}
                 />
             </div>
         </div>
     );
 }
 
-export default Start;
+export default Middle;

@@ -25,7 +25,6 @@ class Recap extends Component {
         })
     }
     render() {
-        console.log(this.props)
         return (
             <div className="container">
 
@@ -51,7 +50,6 @@ class Recap extends Component {
 
 
 const mapStateToProps = state => {
-    console.log(state)
     const { data } = state
     return { reviews: data, review: data.review2 }
 }

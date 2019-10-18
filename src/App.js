@@ -14,10 +14,14 @@ import Recap2 from './components/version2/Recap'
 
 
 import Start from './components/Start'
+import Middle from './components/Middle'
 import Thanks from './components/Thanks'
 import './App.css';
 
 import {
+  START,
+  THANKS,
+  MIDDLE,
   VERSION1_STAR,
   VERSION1_REVIEW,
   VERSION1_SUBMIT,
@@ -36,7 +40,9 @@ const Root = () => {
 
   return (
     <Router>
-      <Route exact path="/" component={Start} />
+      <Route exact path={START} component={Start} />
+      <Route exact path={MIDDLE} component={Middle} />
+      <Route exact path={THANKS} component={Thanks} />
 
       <Route exact path={VERSION1_STAR} component={Enjoy} />
       <Route exact path={VERSION1_MOOD} component={Mood} />
@@ -48,7 +54,6 @@ const Root = () => {
       <Route exact path={VERSION2_REVIEW} component={TextReview2} />
       <Route exact path={VERSION2_SUBMIT} component={Recap2} />
 
-      <Route exact path="/thanks" component={Thanks} />
     </Router>
   );
 
