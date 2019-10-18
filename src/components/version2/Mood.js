@@ -41,18 +41,20 @@ class Mood extends Component {
     }
 
     moodButtons = () => {
-        return (<div className="mood-container">
-            <div>{this.moodButton(0)}</div>
-            <div>{this.moodButton(2)}</div>
-            <div>{this.moodButton(4)}</div>
-            <div>{this.moodButton(6)}</div>
-        </div>)
+        return (
+            <div className="mood-container" style={{ marginTop: "30px" }}>
+                <div className="row"><span>{this.moodButton(0)}</span></div>
+                <div className="row" ><span>{this.moodButton(2)}</span></div>
+                <div className="row" ><span>{this.moodButton(4)}</span></div>
+                <div className="row" ><span>{this.moodButton(6)}</span></div>
+            </div>)
     }
 
     moodButton = (startIndex) => {
         return moodData.OverMoods.map((mood, i) => {
             if (i >= startIndex && i < startIndex + 2)
                 return (
+
                     <MoodBox
                         key={i}
                         value={mood.word}
@@ -68,26 +70,18 @@ class Mood extends Component {
             page: reactSwipeEl.swipe.getPos()
         })
     }
-    MoodSwipe = () => {
 
-
-        return (
-            <div style={{ "marginTop": "30px" }}>
-                {this.moodButtons(7)}
-            </div >
-        );
-    };
 
     render() {
         return (
             <div className="container">
                 <ProgressBar progress={2} />
-                <div className="data-container" >
+                <div className="data-container" style={{ height: "80%" }}>
                     <div>
                         <h1>Which moods describes the book best?</h1>
                         <p style={{ margin: 0 }}>you can choose more then one!</p>
                     </div>
-                    {this.MoodSwipe()}
+                    {this.moodButtons()}
                 </div>
 
                 <div className="button-container">

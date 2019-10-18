@@ -5,7 +5,7 @@ import Button from '../../shared/components/Button/Button'
 import StarRating from './StarRating'
 import MoodButton from '../../shared/components/Button/MoodButton';
 import moodData from '../../shared/moods.json'
-
+import { MIDDLE } from '../../shared/routes'
 
 
 class Recap extends Component {
@@ -40,7 +40,7 @@ class Recap extends Component {
                 <div className="button-container">
                     <Button
                         value="Submit"
-                        path="/thanks" />
+                        path={MIDDLE} />
                 </div>
             </div >
         );

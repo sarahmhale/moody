@@ -1,8 +1,6 @@
 .mood-box{
-    height: 80px;
-    width: 42%;
+  height: 100%;
     border: none;
-    margin: 8px;
     font-family: "StorytelEuclid" , -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif;

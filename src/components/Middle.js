@@ -5,9 +5,10 @@ import { VERSION2_STAR } from '../shared/routes'
 
 const Middle = () => {
     return (
-        <div className="container">
+        <div className="test-info-container">
+            <div />
             <div className="data-container">
-                <h1> Version 2 </h1>
+                <h1 style={{ color: "#FFFFFF" }}> Version 2 </h1>
             </div>
             <div className="button-container">
                 <Button

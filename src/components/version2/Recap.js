@@ -3,20 +3,20 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import Button from '../../shared/components/Button/Button'
 import StarRating from './StarRating'
-import MoodButton from '../../shared/components/Button/MoodButton';
+import MoodBox from '../../shared/components/Moodboxes/MoodBox';
 import moodData from '../../shared/moods.json'
 
 
 class Recap extends Component {
     renderMoods = () => {
         return this.props.review.moodWords.map((reviewMood) => {
-            return moodData.moods.map((mood, i) => {
+            return moodData.OverMoods.map((mood, i) => {
                 if (mood.word === reviewMood)
                     return (
-                        <MoodButton
+                        <MoodBox
                             key={i}
                             value={mood.word}
-                            emoji={mood.emoji}
+                            color={mood.color}
                             edit={false}
                         />)
                 return null;
