@@ -11,7 +11,7 @@ class Recap extends Component {
     renderMoods = () => {
         return this.props.review.moodWords.map((reviewMood) => {
             return moodData.moods.map((mood, i) => {
-                if (mood.word == reviewMood)
+                if (mood.word === reviewMood)
                     return (
                         <MoodButton
                             key={i}
@@ -19,11 +19,13 @@ class Recap extends Component {
                             emoji={mood.emoji}
                             edit={false}
                         />)
+                return null;
             })
 
         })
     }
     render() {
+        console.log(this.props)
         return (
             <div className="container">
 
@@ -49,6 +51,7 @@ class Recap extends Component {
 
 
 const mapStateToProps = state => {
+    console.log(state)
     const { data } = state
     return { reviews: data, review: data.review2 }
 }

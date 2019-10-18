@@ -5,7 +5,7 @@ import * as actions from '../../actions';
 import ProgressBar from '../../shared/components/ProgressBar/Progress'
 import Button from '../../shared/components/Button/Button'
 import './TextReview.css'
-import { VERSION1_SUBMIT } from '../../shared/routes'
+import { VERSION2_SUBMIT } from '../../shared/routes'
 
 class TextReview extends Component {
     constructor() {
@@ -36,7 +36,7 @@ class TextReview extends Component {
                 <div className="button-container">
                     <Button
                         value="Next"
-                        path={VERSION1_SUBMIT}
+                        path={VERSION2_SUBMIT}
                         onClick={this.props.addText(this.state.currentText)} />
                 </div>
             </div>

@@ -3,13 +3,11 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ProgressBar from '../../shared/components/ProgressBar/Progress'
 import Button from '../../shared/components/Button/Button'
-import MoodButton from '../../shared/components/Button/MoodButton';
-import ReactSwipe from 'react-swipe';
+import MoodBox from '../../shared/components/Moodboxes/MoodBox'
 import './Mood.css'
 import moodData from '../../shared/moods.json'
-import Bullet from '../../shared/components/ProgressBar/Bullets';
 
-import { VERSION1_REVIEW } from '../../shared/routes'
+import { VERSION2_REVIEW } from '../../shared/routes'
 
 
 class Mood extends Component {
@@ -42,17 +40,27 @@ class Mood extends Component {
         }
     }
 
-    moodButtons = (startIndex) => {
-        return moodData.moods.map((mood, i) => {
-            if (i >= startIndex && i <= (startIndex + 4))
+    moodButtons = () => {
+        return (<div className="mood-container">
+            <div>{this.moodButton(0)}</div>
+            <div>{this.moodButton(2)}</div>
+            <div>{this.moodButton(4)}</div>
+            <div>{this.moodButton(6)}</div>
+        </div>)
+    }
+
+    moodButton = (startIndex) => {
+        return moodData.OverMoods.map((mood, i) => {
+            if (i >= startIndex && i < startIndex + 2)
                 return (
-                    <MoodButton
+                    <MoodBox
                         key={i}
                         value={mood.word}
-                        emoji={mood.emoji}
+                        color={mood.color}
                         onClick={this.onClick}
                         edit={true}
                     />)
+            return null;
         })
     }
     swipe = (reactSwipeEl) => {
@@ -61,28 +69,11 @@ class Mood extends Component {
         })
     }
     MoodSwipe = () => {
-        let reactSwipeEl;
-        let pageNumber = 1;
+
 
         return (
             <div style={{ "marginTop": "30px" }}>
-                <ReactSwipe
-                    className="carousel"
-                    ref={el => (reactSwipeEl = el)}
-
-                    swipeOptions={{ callback: () => this.swipe(reactSwipeEl), startSlide: this.state.page }}
-                >
-                    <div className="mood-swipe">
-                        {this.moodButtons(0)}
-                    </div>
-                    <div className="mood-swipe">
-                        {this.moodButtons(5)}
-                    </div>
-
-                </ReactSwipe>
-                <Bullet style={{ "marginTop": "30px" }} progress={this.state.page} />
-
-
+                {this.moodButtons(7)}
             </div >
         );
     };
@@ -91,14 +82,17 @@ class Mood extends Component {
         return (
             <div className="container">
                 <ProgressBar progress={2} />
-                <div className="data-container">
-                    <h1>Which moods describes the book best?</h1>
+                <div className="data-container" >
+                    <div>
+                        <h1>Which moods describes the book best?</h1>
+                        <p style={{ margin: 0 }}>you can choose more then one!</p>
+                    </div>
                     {this.MoodSwipe()}
                 </div>
 
                 <div className="button-container">
                     <Button value="Next"
-                        path={VERSION1_REVIEW}
+                        path={VERSION2_REVIEW}
                         onClick={() => this.props.addMoods(this.state.moods)} />
                 </div>
             </div >

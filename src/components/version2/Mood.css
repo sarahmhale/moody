@@ -1,7 +1,7 @@
-.mood-swipe{
+.mood-container{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
    
 }

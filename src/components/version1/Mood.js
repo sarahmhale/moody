@@ -53,6 +53,7 @@ class Mood extends Component {
                         onClick={this.onClick}
                         edit={true}
                     />)
+            return null;
         })
     }
     swipe = (reactSwipeEl) => {
@@ -62,7 +63,6 @@ class Mood extends Component {
     }
     MoodSwipe = () => {
         let reactSwipeEl;
-        let pageNumber = 1;
 
         return (
             <div style={{ "marginTop": "30px" }}>
