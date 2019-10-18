@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
+import * as actions from '../../actions';
 
-import ProgressBar from '../shared/components/ProgressBar/Progress'
-import Button from '../shared/components/Button/Button'
+import ProgressBar from '../../shared/components/ProgressBar/Progress'
+import Button from '../../shared/components/Button/Button'
 import './TextReview.css'
-
+import { VERSION1_SUBMIT } from '../../shared/routes'
 
 class TextReview extends Component {
     constructor() {
@@ -36,7 +36,7 @@ class TextReview extends Component {
                 <div className="button-container">
                     <Button
                         value="Next"
-                        path="/submit"
+                        path={VERSION1_SUBMIT}
                         onClick={this.props.addText(this.state.currentText)} />
                 </div>
             </div>
@@ -48,7 +48,7 @@ class TextReview extends Component {
 const mapDispatchToProps = dispatch => {
     return {
         addText: text => {
-            dispatch(actions.addText(text))
+            dispatch(actions.addText2(text))
         }
     }
 }

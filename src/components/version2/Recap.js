@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
-import Button from '../shared/components/Button/Button'
+import * as actions from '../../actions';
+import Button from '../../shared/components/Button/Button'
 import StarRating from './StarRating'
-import MoodButton from '../shared/components/Button/MoodButton';
-import moodData from '../shared/moods.json'
+import MoodButton from '../../shared/components/Button/MoodButton';
+import moodData from '../../shared/moods.json'
 
 
 class Recap extends Component {
@@ -39,7 +39,7 @@ class Recap extends Component {
                 <div className="button-container">
                     <Button
                         value="Submit"
-                        onClick={this.props.submitReview(this.props.review)}
+                        onClick={this.props.submitReview(this.props.reviews)}
                         path="/thanks" />
                 </div>
             </div >
@@ -50,12 +50,12 @@ class Recap extends Component {
 
 const mapStateToProps = state => {
     const { data } = state
-    return { review: data }
+    return { reviews: data, review: data.review2 }
 }
 const mapDispatchToProps = dispatch => {
     return {
         submitReview: review => {
-            dispatch(actions.submitReview(review))
+            dispatch(actions.submitReview2(review))
         }
     }
 }

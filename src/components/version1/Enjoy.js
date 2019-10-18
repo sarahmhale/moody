@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
+import * as actions from '../../actions';
 import StarRating from './StarRating'
 
-
-import Button from '../shared/components/Button/Button'
-import ProgressBar from '../shared/components/ProgressBar/Progress'
+import { VERSION1_MOOD } from '../../shared/routes'
+import Button from '../../shared/components/Button/Button'
+import ProgressBar from '../../shared/components/ProgressBar/Progress'
 
 class Enjoy extends Component {
     state = {
@@ -32,7 +32,7 @@ class Enjoy extends Component {
                 <div className="button-container">
                     <Button
                         value="Next"
-                        path="/mood"
+                        path={VERSION1_MOOD}
                         onClick={() => this.props.addStarRating(this.state.rating)} />
                 </div>
             </div >

@@ -40,5 +40,39 @@
             "word": "Unpredictable",
             "emoji": "😲"
         }
+    ],
+    "over-moods": [
+        {
+            "word": "Cheerful",
+            "color": "#FDE597"
+        },
+        {
+            "word": "Exciting",
+            "color": "#6A648D"
+        },
+        {
+            "word": "Inspiring",
+            "color": "#A5E19B"
+        },
+        {
+            "word": "Puzzling",
+            "color": "#E3C5ED"
+        },
+        {
+            "word": "Sad",
+            "color": "#B4D9EF"
+        },
+        {
+            "word": "Scary",
+            "color": "#FEC167"
+        },
+        {
+            "word": "Romantic",
+            "color": "#FFA2D4"
+        },
+        {
+            "word": "Surprising",
+            "color": "#FF8473"
+        }
     ]
 }

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
-import ProgressBar from '../shared/components/ProgressBar/Progress'
-import Button from '../shared/components/Button/Button'
-import MoodButton from '../shared/components/Button/MoodButton';
+import * as actions from '../../actions';
+import ProgressBar from '../../shared/components/ProgressBar/Progress'
+import Button from '../../shared/components/Button/Button'
+import MoodButton from '../../shared/components/Button/MoodButton';
 import ReactSwipe from 'react-swipe';
 import './Mood.css'
-import moodData from '../shared/moods.json'
-import Bullet from '../shared/components/ProgressBar/Bullets';
+import moodData from '../../shared/moods.json'
+import Bullet from '../../shared/components/ProgressBar/Bullets';
+
+import { VERSION1_REVIEW } from '../../shared/routes'
 
 
 class Mood extends Component {
@@ -90,14 +92,15 @@ class Mood extends Component {
             <div className="container">
                 <ProgressBar progress={2} />
                 <div className="data-container">
-
                     <h1>Which moods describes the book best?</h1>
-
                     {this.MoodSwipe()}
-
                 </div>
 
-                <div className="button-container"> <Button value="Next" path="/textReview" onClick={() => this.props.addMoods(this.state.moods)} />  </div>
+                <div className="button-container">
+                    <Button value="Next"
+                        path={VERSION1_REVIEW}
+                        onClick={() => this.props.addMoods(this.state.moods)} />
+                </div>
             </div >
         );
     }
