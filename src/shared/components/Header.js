@@ -1,15 +1,23 @@
 import React from 'react';
 import { MdClear, MdEdit } from 'react-icons/md';
+
+import {
+    Link
+} from "react-router-dom";
+
 function Header(props) {
 
     return (
         <div className="progressbar-container">
-
-            <MdClear size={26} style={{ paddingLeft: "16px" }} />
+            <Link to={props.path} onClick={props.onClick}>
+                <MdClear size={26} style={{ paddingLeft: "16px" }} />
+            </Link>
             <p>Review</p>
 
             {props.edit ?
-                <MdEdit size={26} style={{ paddingRight: "16px" }} />
+                <Link to={props.editPath} >
+                    <MdEdit size={26} style={{ paddingRight: "16px" }} />
+                </Link>
                 :
                 <div style={{ paddingRight: "36px" }} />
             }

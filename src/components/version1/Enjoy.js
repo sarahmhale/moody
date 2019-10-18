@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import StarRating from './StarRating'
 
-import { VERSION1_MOOD } from '../../shared/routes'
+import { VERSION1_MOOD, MIDDLE } from '../../shared/routes'
 import Button from '../../shared/components/Button/Button'
 import ProgressBar from '../../shared/components/ProgressBar/Progress'
 import Header from '../../shared/components/Header'
@@ -20,13 +20,17 @@ class Enjoy extends Component {
         });
     }
 
+    exit = () => {
+        this.props.reset()
+    }
+
     render() {
 
         return (
             <div className="container">
                 <div>
                     <ProgressBar progress={1} />
-                    <Header edit={true} />
+                    <Header onClick={() => this.exit()} path={MIDDLE} />
                 </div>
 
                 <div className="data-container">
@@ -48,9 +52,8 @@ class Enjoy extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        addStarRating: stars => {
-            dispatch(actions.addStartRating(stars))
-        }
+        addStarRating: stars => dispatch(actions.addStartRating(stars)),
+        reset: () => dispatch(actions.resetVersion1())
     }
 }
 

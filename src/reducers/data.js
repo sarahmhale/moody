@@ -2,9 +2,11 @@ import {
     ADD_STARRATING,
     ADD_MOODS,
     ADD_REVIEW,
+    RESET_VERSION1,
     ADD_STARRATING_2,
     ADD_MOODS_2,
     ADD_REVIEW_2,
+    RESET_VERSION2
 } from '../actions/types';
 
 
@@ -49,6 +51,18 @@ export default (state = initialState, action) => {
                 }
             })
 
+        case RESET_VERSION1:
+            return ({
+                ...state,
+                review1: {
+                    starRating: "",
+                    moodWords: [],
+                    text: "",
+                    exit: true
+                }
+            })
+
+
         case ADD_STARRATING_2:
             return ({
                 ...state,
@@ -71,6 +85,18 @@ export default (state = initialState, action) => {
                 review2: {
                     ...state.review2,
                     text: action.text
+                }
+            })
+
+
+        case RESET_VERSION2:
+            return ({
+                ...state,
+                review2: {
+                    starRating: "",
+                    moodWords: [],
+                    text: "",
+                    exit: true
                 }
             })
         default:

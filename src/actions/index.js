@@ -6,6 +6,8 @@ import {
     ADD_STARRATING_2,
     ADD_MOODS_2,
     ADD_REVIEW_2,
+    RESET_VERSION1,
+    RESET_VERSION2
 } from './types'
 
 const submitReview = newReview => async dispatch => {
@@ -22,6 +24,14 @@ const addMoods = (moods) => {
 
 const addText = (text) => {
     return { type: ADD_REVIEW, text }
+}
+
+const resetVersion1 = () => {
+    return { type: RESET_VERSION1 }
+}
+
+const resetVersion2 = () => {
+    return { type: RESET_VERSION2 }
 }
 
 
@@ -51,5 +61,7 @@ export {
     addStartRating2,
     addMoods2,
     addText2,
-    submitReview2
+    submitReview2,
+    resetVersion1,
+    resetVersion2
 }
