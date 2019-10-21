@@ -55,9 +55,7 @@ export default (state = initialState, action) => {
             return ({
                 ...state,
                 review1: {
-                    starRating: "",
-                    moodWords: [],
-                    text: "",
+                    ...state.review1,
                     exit: true
                 }
             })
@@ -93,9 +91,7 @@ export default (state = initialState, action) => {
             return ({
                 ...state,
                 review2: {
-                    starRating: "",
-                    moodWords: [],
-                    text: "",
+                    ...state.review2,
                     exit: true
                 }
             })

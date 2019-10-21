@@ -10,6 +10,7 @@ import moodData from '../../shared/moods.json'
 import Bullet from '../../shared/components/ProgressBar/Bullets';
 
 import { VERSION1_REVIEW } from '../../shared/routes'
+import ResetHeader from './ResetHeader';
 
 
 class Mood extends Component {
@@ -90,7 +91,10 @@ class Mood extends Component {
     render() {
         return (
             <div className="container">
-                <ProgressBar progress={2} />
+                <div>
+                    <ProgressBar progress={2} />
+                    <ResetHeader />
+                </div>
                 <div className="data-container">
                     <h1>Which moods describes the book best?</h1>
                     {this.MoodSwipe()}

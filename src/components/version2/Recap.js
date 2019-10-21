@@ -5,6 +5,7 @@ import Button from '../../shared/components/Button/Button'
 import StarRating from './StarRating'
 import MoodBox from '../../shared/components/Moodboxes/MoodBox';
 import moodData from '../../shared/moods.json'
+import ResetHeader from './ResetHeader';
 
 
 class Recap extends Component {
@@ -29,7 +30,10 @@ class Recap extends Component {
             <div className="container">
 
                 <div className="data-container" style={{ "marginTop": "30px" }}>
-                    <h1>Recap</h1>
+                    <div>
+                        <h1>Recap</h1>
+                        <ResetHeader />
+                    </div>
                     <StarRating rating={this.props.review.starRating} style={{ "marginTop": "40px" }} />
                     <div className="mood-swipe" style={{ "marginTop": "30px" }} >
                         {this.renderMoods()}
@@ -56,7 +60,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         submitReview: review => {
-            dispatch(actions.submitReview2(review))
+            dispatch(actions.submitReview(review))
         }
     }
 }

@@ -6,6 +6,7 @@ import ProgressBar from '../../shared/components/ProgressBar/Progress'
 import Button from '../../shared/components/Button/Button'
 import './TextReview.css'
 import { VERSION2_SUBMIT } from '../../shared/routes'
+import ResetHeader from './ResetHeader';
 
 class TextReview extends Component {
     constructor() {
@@ -22,7 +23,10 @@ class TextReview extends Component {
     render() {
         return (
             <div className="container">
-                <ProgressBar progress={3} />
+                <div>
+                    <ProgressBar progress={3} />
+                    <ResetHeader />
+                </div>
                 <div className="data-container">
                     <h1>Do you want to write a review?</h1>
                     <textarea

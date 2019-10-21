@@ -6,6 +6,7 @@ import StarRating from './StarRating'
 import MoodButton from '../../shared/components/Button/MoodButton';
 import moodData from '../../shared/moods.json'
 import { MIDDLE } from '../../shared/routes'
+import ResetHeader from './ResetHeader';
 
 
 class Recap extends Component {
@@ -29,6 +30,7 @@ class Recap extends Component {
         return (
             <div className="container">
                 <div className="data-container" style={{ "marginTop": "30px" }}>
+                    <ResetHeader edit={true} />
                     <h1>Recap</h1>
                     <StarRating rating={this.props.review.starRating} style={{ "marginTop": "40px" }} />
                     <div className="mood-swipe" style={{ "marginTop": "30px" }} >

@@ -6,7 +6,7 @@ import Button from '../../shared/components/Button/Button'
 import MoodBox from '../../shared/components/Moodboxes/MoodBox'
 import './Mood.css'
 import moodData from '../../shared/moods.json'
-
+import ResetHeader from './ResetHeader'
 import { VERSION2_REVIEW } from '../../shared/routes'
 
 
@@ -75,7 +75,10 @@ class Mood extends Component {
     render() {
         return (
             <div className="container">
-                <ProgressBar progress={2} />
+                <div>
+                    <ProgressBar progress={2} />
+                    <ResetHeader />
+                </div>
                 <div className="data-container" style={{ height: "80%" }}>
                     <div>
                         <h1>Which moods describes the book best?</h1>

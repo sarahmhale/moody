@@ -35,10 +35,6 @@ const resetVersion2 = () => {
 }
 
 
-const submitReview2 = newReview => async dispatch => {
-    reviewsRef.push().set(newReview);
-};
-
 const addStartRating2 = (starRating) => {
     return { type: ADD_STARRATING_2, starRating }
 }
@@ -61,7 +57,6 @@ export {
     addStartRating2,
     addMoods2,
     addText2,
-    submitReview2,
     resetVersion1,
     resetVersion2
 }

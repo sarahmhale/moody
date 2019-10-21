@@ -6,6 +6,7 @@ import StarRating from './StarRating'
 import { VERSION2_MOOD } from '../../shared/routes'
 import Button from '../../shared/components/Button/Button'
 import ProgressBar from '../../shared/components/ProgressBar/Progress'
+import ResetHeader from './ResetHeader';
 
 class Enjoy extends Component {
     state = {
@@ -23,7 +24,10 @@ class Enjoy extends Component {
 
         return (
             <div className="container">
-                <ProgressBar progress={1} />
+                <div>
+                    <ProgressBar progress={1} />
+                    <ResetHeader />
+                </div>
                 <div className="data-container">
                     <h1>Did you enjoy the book?</h1>
                     <StarRating changeRating={this.changeRating} rating={this.state.rating} />
