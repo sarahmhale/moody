@@ -11,7 +11,10 @@ import Bullet from '../../shared/components/ProgressBar/Bullets';
 
 import { VERSION1_REVIEW } from '../../shared/routes'
 import ResetHeader from './ResetHeader';
-
+import {
+    BrowserView,
+    MobileView,
+} from "react-device-detect";
 
 class Mood extends Component {
 
@@ -81,7 +84,13 @@ class Mood extends Component {
                     </div>
 
                 </ReactSwipe>
-                <Bullet style={{ "marginTop": "30px" }} progress={this.state.page} />
+                <BrowserView style={{ "marginTop": "30px" }}>
+                    <button onClick={() => reactSwipeEl.next()}>Next</button>
+                    <button onClick={() => reactSwipeEl.prev()}>Previous</button>
+                </BrowserView>
+                <MobileView>
+                    <Bullet style={{ "marginTop": "30px" }} progress={this.state.page} />
+                </MobileView>
 
 
             </div >
