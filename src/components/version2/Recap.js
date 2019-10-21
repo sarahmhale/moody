@@ -28,13 +28,10 @@ class Recap extends Component {
     render() {
         return (
             <div className="container">
-
+                <ResetHeader edit={true} />
                 <div className="data-container" style={{ "marginTop": "30px" }}>
-                    <div>
-                        <ResetHeader edit={true} />
-                        <h1>Recap</h1>
 
-                    </div>
+                    <h1>Recap</h1>
                     <StarRating rating={this.props.review.starRating} style={{ "marginTop": "40px" }} />
                     <div className="mood-swipe" style={{ "marginTop": "30px" }} >
                         {this.renderMoods()}

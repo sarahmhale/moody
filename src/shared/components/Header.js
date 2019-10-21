@@ -10,13 +10,13 @@ function Header(props) {
     return (
         <div className="progressbar-container">
             <Link to={props.path} onClick={props.onClick}>
-                <MdClear size={26} style={{ paddingLeft: "16px" }} />
+                <MdClear size={26} style={{ paddingLeft: "16px", color: "#000" }} />
             </Link>
             <p>Review</p>
 
             {props.edit ?
                 <Link to={props.editPath} >
-                    <MdEdit size={26} style={{ paddingRight: "16px" }} />
+                    <MdEdit size={26} style={{ paddingRight: "16px", color: "#000" }} />
                 </Link>
                 :
                 <div style={{ paddingRight: "36px" }} />
