@@ -10,11 +10,9 @@ class Thanks extends Component {
     render() {
         return (
             <div className="test-info-container">
-                <div />
-                <div className="data-container">
-                    <h1 style={{ color: "#FFFFFF" }}> Thank you for helping with my masterthesis! <Emoji symbol="😍" label="" /></h1>
-                </div>
-                <div />
+
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmFKu91e5XOCDzbwe-7asN2bjkKhcTxlGm_QAkonJ9wI9UXg/viewform?embedded=true" width="320" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
             </div>)
     }
 

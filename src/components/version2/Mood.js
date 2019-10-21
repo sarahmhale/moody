@@ -42,7 +42,7 @@ class Mood extends Component {
 
     moodButtons = () => {
         return (
-            <div className="mood-container" style={{ marginTop: "30px" }}>
+            <div className="mood-container">
                 <div className="row"><span>{this.moodButton(0)}</span></div>
                 <div className="row" ><span>{this.moodButton(2)}</span></div>
                 <div className="row" ><span>{this.moodButton(4)}</span></div>
@@ -79,11 +79,8 @@ class Mood extends Component {
                     <ProgressBar progress={2} />
                     <ResetHeader />
                 </div>
-                <div className="data-container" style={{ height: "80%" }}>
-                    <div>
-                        <h1>Which moods describes the book best?</h1>
-
-                    </div>
+                <h1>Which moods describes the book best?</h1>
+                <div className="data-container" style={{ height: "60%" }}>
                     {this.moodButtons()}
                 </div>
 

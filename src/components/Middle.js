@@ -8,7 +8,7 @@ const Middle = () => {
         <div className="test-info-container">
             <div />
             <div className="data-container">
-                <h1 style={{ color: "#FFFFFF" }}> Version 2 </h1>
+                <h1 style={{ color: "#FFFFFF" }}> Nice! Let's try out VERSION 2 </h1>
             </div>
             <div className="button-container">
                 <Button
