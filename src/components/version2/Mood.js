@@ -82,7 +82,7 @@ class Mood extends Component {
                 <div className="data-container" style={{ height: "80%" }}>
                     <div>
                         <h1>Which moods describes the book best?</h1>
-                        <p style={{ margin: 0 }}>you can choose more then one!</p>
+
                     </div>
                     {this.moodButtons()}
                 </div>
