@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
-import { THANKS } from '../../shared/routes'
+import { THANKS, VERSION2_STAR } from '../../shared/routes'
 import Header from '../../shared/components/Header'
 
 class ResetHeader extends Component {
@@ -13,7 +13,7 @@ class ResetHeader extends Component {
     render() {
 
         if (this.props.edit)
-            return (<Header onClick={() => this.exit()} path={THANKS} edit={this.props.edit} />);
+            return (<Header onClick={() => this.exit()} path={THANKS} edit={this.props.edit} editPath={VERSION2_STAR} />);
         else
             return (<Header onClick={() => this.exit()} path={THANKS} />);
     }
