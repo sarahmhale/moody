@@ -32,6 +32,7 @@ class MoodButton extends React.Component {
                 className={"mood-box " + btn_style}
                 onClick={this.onPress.bind(this)} >
                 {this.props.value}
+                <img src={require(`../../../assets/${this.props.img}`)} alt="" />
             </button>
         );
     }

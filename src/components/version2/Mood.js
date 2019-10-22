@@ -57,6 +57,7 @@ class Mood extends Component {
 
                     <MoodBox
                         key={i}
+                        img={mood.img}
                         value={mood.word}
                         color={mood.color}
                         onClick={this.onClick}

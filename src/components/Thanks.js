@@ -11,7 +11,7 @@ class Thanks extends Component {
         return (
             <div className="test-info-container">
 
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmFKu91e5XOCDzbwe-7asN2bjkKhcTxlGm_QAkonJ9wI9UXg/viewform?embedded=true" width="320" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmFKu91e5XOCDzbwe-7asN2bjkKhcTxlGm_QAkonJ9wI9UXg/viewform?embedded=true" width={window.innerWidth} height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
             </div>)
     }

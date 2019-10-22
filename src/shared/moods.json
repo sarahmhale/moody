@@ -44,35 +44,43 @@
     "OverMoods": [
         {
             "word": "Cheerful",
-            "color": "#FDE597"
+            "color": "#FDE597",
+            "img": "cheerful.png"
         },
         {
             "word": "Exciting",
-            "color": "#6A648D"
+            "color": "#6A648D",
+            "img": "exciting.png"
         },
         {
             "word": "Inspiring",
-            "color": "#A5E19B"
+            "color": "#A5E19B",
+            "img": "inspiring.png"
         },
         {
             "word": "Puzzling",
-            "color": "#E3C5ED"
+            "color": "#E3C5ED",
+            "img": "puzzled.png"
         },
         {
             "word": "Sad",
-            "color": "#B4D9EF"
+            "color": "#B4D9EF",
+            "img": "sad.png"
         },
         {
             "word": "Scary",
-            "color": "#FEC167"
+            "color": "#FEC167",
+            "img": "scary.png"
         },
         {
             "word": "Romantic",
-            "color": "#FFA2D4"
+            "color": "#FFA2D4",
+            "img": "romantic.png"
         },
         {
             "word": "Surprising",
-            "color": "#FF8473"
+            "color": "#FF8473",
+            "img": "surprising.png"
         }
     ]
 }
