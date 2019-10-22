@@ -16,3 +16,15 @@
 .opacity-button{
     opacity: 0.5;
 }
+
+
+.mood-img svg {
+  height: 50px;
+  width: 50px;
+  margin: 0 10px 0 0;
+}
+
+.mood-img rect {
+  height: 49px;
+  width: 49px;
+}

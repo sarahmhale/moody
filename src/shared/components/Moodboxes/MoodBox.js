@@ -1,6 +1,6 @@
 import React from 'react';
 import './MoodBox.css';
-
+import ReactSVG from 'react-svg'
 class MoodButton extends React.Component {
     constructor(props) {
         super();
@@ -31,8 +31,17 @@ class MoodButton extends React.Component {
                 style={{ backgroundColor: this.props.color, color: color }}
                 className={"mood-box " + btn_style}
                 onClick={this.onPress.bind(this)} >
-                {this.props.value}
-                <img src={require(`../../../assets/${this.props.img}`)} alt="" />
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    margin: "0 10px 0 1%"
+
+                }}>
+
+                    <ReactSVG className="mood-img" src={require(`../../../assets/svg/${this.props.img}.svg`)} />
+                    {this.props.value}
+                </div>
             </button>
         );
     }

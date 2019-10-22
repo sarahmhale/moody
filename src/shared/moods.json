@@ -45,42 +45,42 @@
         {
             "word": "Cheerful",
             "color": "#FDE597",
-            "img": "cheerful.png"
+            "img": "cheerful"
         },
         {
             "word": "Exciting",
             "color": "#6A648D",
-            "img": "exciting.png"
+            "img": "excited"
         },
         {
             "word": "Inspiring",
             "color": "#A5E19B",
-            "img": "inspiring.png"
+            "img": "inspiring"
         },
         {
             "word": "Puzzling",
             "color": "#E3C5ED",
-            "img": "puzzled.png"
+            "img": "puzzling"
         },
         {
             "word": "Sad",
             "color": "#B4D9EF",
-            "img": "sad.png"
+            "img": "sad"
         },
         {
             "word": "Scary",
             "color": "#FEC167",
-            "img": "scary.png"
+            "img": "scary"
         },
         {
             "word": "Romantic",
             "color": "#FFA2D4",
-            "img": "romantic.png"
+            "img": "romantic"
         },
         {
             "word": "Surprising",
             "color": "#FF8473",
-            "img": "surprising.png"
+            "img": "surprising"
         }
     ]
 }
