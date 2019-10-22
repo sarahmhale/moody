@@ -9,8 +9,13 @@ function Bullet(props) {
                 <div className="circle-filled" /> : <div className="circle-grey" />}
             {props.progress === 1 ?
                 <div className="circle-filled" /> : <div className="circle-grey" />}
-            {/* {props.progress === 3 ?
-                <div className="filled" /> : <div className="grey" />} */}
+            {props.progress === 2 ?
+                <div className="circle-filled" /> : <div className="circle-grey" />}
+            {props.progress === 3 ?
+                <div className="circle-filled" /> : <div className="circle-grey" />}
+            {props.progress === 4 ?
+                <div className="circle-filled" /> : <div className="circle-grey" />}
+
         </div>
     );
 

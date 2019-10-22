@@ -14,12 +14,14 @@ class Recap extends Component {
             return moodData.OverMoods.map((mood, i) => {
                 if (mood.word === reviewMood)
                     return (
-                        <MoodBox
-                            key={i}
-                            value={mood.word}
-                            color={mood.color}
-                            edit={false}
-                        />)
+                        <div key={i}>
+                            <MoodBox
+
+                                img={mood.img}
+                                value={mood.word}
+                                color={mood.color}
+                                edit={false}
+                            /></div>)
                 return null;
             })
 
@@ -31,7 +33,7 @@ class Recap extends Component {
                 <ResetHeader edit={true} />
                 <div className="data-container" style={{ "marginTop": "30px" }}>
 
-                    <h1>Recap</h1>
+                    <h1>So, recap!</h1>
                     <StarRating rating={this.props.review.starRating} style={{ "marginTop": "40px" }} />
                     <div className="mood-swipe" style={{ "marginTop": "30px" }} >
                         {this.renderMoods()}
@@ -39,6 +41,7 @@ class Recap extends Component {
                     <p style={{ "marginTop": "30px" }}>{this.props.review.text}</p>
 
                 </div>
+
                 <div className="button-container">
                     <Button
                         value="Submit"

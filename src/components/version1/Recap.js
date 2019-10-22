@@ -12,7 +12,7 @@ import ResetHeader from './ResetHeader';
 class Recap extends Component {
     renderMoods = () => {
         return this.props.review.moodWords.map((reviewMood) => {
-            return moodData.moods.map((mood, i) => {
+            return moodData.moodsNoCategory.map((mood, i) => {
                 if (mood.word === reviewMood)
                     return (
                         <MoodButton

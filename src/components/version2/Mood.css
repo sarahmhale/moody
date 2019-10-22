@@ -8,7 +8,7 @@
 
 .row{
     height: 22%;
-    width: 99%;
+    width: 100%;
     margin-bottom: 3%;
    
 }
@@ -24,8 +24,8 @@
 .row button{
     display: table-cell;
     border-radius: 8px;
-    width: 44%;
-    margin: 1.5%;
+    width: 48%;
+    margin: 1%;
 }
 
 @media all and (max-width: 480px) {

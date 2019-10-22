@@ -46,18 +46,18 @@ class Mood extends Component {
         }
     }
 
-    moodButtons = (startIndex) => {
-        return moodData.moods.map((mood, i) => {
-            if (i >= startIndex && i <= (startIndex + 4))
-                return (
-                    <MoodButton
-                        key={i}
-                        value={mood.word}
-                        emoji={mood.emoji}
-                        onClick={this.onClick}
-                        edit={true}
-                    />)
-            return null;
+    moodButtons = (array) => {
+        return array.map((mood, i) => {
+
+            return (
+                <MoodButton
+                    key={i}
+                    value={mood.word}
+                    emoji={mood.emoji}
+                    onClick={this.onClick}
+                    edit={true}
+                />)
+
         })
     }
     swipe = (reactSwipeEl) => {
@@ -76,20 +76,41 @@ class Mood extends Component {
 
                     swipeOptions={{ callback: () => this.swipe(reactSwipeEl), startSlide: this.state.page }}
                 >
-                    <div className="mood-swipe">
-                        {this.moodButtons(0)}
+                    <div>
+                        <p>Positive</p>
+                        <div className="mood-swipe">
+                            {this.moodButtons(moodData.moods["Positive"])}
+                        </div>
                     </div>
-                    <div className="mood-swipe">
-                        {this.moodButtons(5)}
-                    </div>
+                    <div>
+                        <p>Negative</p>
+                        <div className="mood-swipe">
+                            {this.moodButtons(moodData.moods["Negative"])}
+                        </div></div>
+
+                    <div>
+                        <p>On-edge</p>
+                        <div className="mood-swipe">
+                            {this.moodButtons(moodData.moods["On-edge"])}
+                        </div></div>
+                    <div >
+                        <p>Puzzling</p>
+                        <div className="mood-swipe">
+                            {this.moodButtons(moodData.moods["Puzzling"])}
+                        </div></div>
+                    <div >
+                        <p>Uplifiting</p>
+                        <div className="mood-swipe">
+                            {this.moodButtons(moodData.moods["Uplifiting"])}
+                        </div></div>
 
                 </ReactSwipe>
-                <BrowserView style={{ "marginTop": "30px" }}>
+                <BrowserView >
                     <button onClick={() => reactSwipeEl.next()}>Next</button>
                     <button onClick={() => reactSwipeEl.prev()}>Previous</button>
                 </BrowserView>
                 <MobileView>
-                    <Bullet style={{ "marginTop": "30px" }} progress={this.state.page} />
+                    <Bullet progress={this.state.page} />
                 </MobileView>
 
 

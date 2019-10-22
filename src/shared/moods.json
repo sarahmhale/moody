@@ -1,46 +1,130 @@
 {
-    "moods": [
+    "moodsNoCategory": [
         {
             "word": "Happy",
+            "emoji": "😁"
+        },
+        {
+            "word": "Funny",
             "emoji": "😂"
-        },
-        {
-            "word": "Exciting",
-            "emoji": "😧"
-        },
-        {
-            "word": "Inspiring",
-            "emoji": "😃"
         },
         {
             "word": "Romantic",
             "emoji": "😍"
         },
         {
-            "word": "Mysterious",
-            "emoji": "👹"
-        },
-        {
-            "word": "Puzzling",
-            "emoji": "🤔"
-        },
-        {
             "word": "Sad",
             "emoji": "😢"
         },
         {
-            "word": "Happy",
-            "emoji": "😁"
+            "word": "Depressing",
+            "emoji": "😔"
+        },
+        {
+            "word": "grim",
+            "emoji": "🤢"
         },
         {
             "word": "Scary",
             "emoji": "😱"
         },
         {
+            "word": "Thrilling",
+            "emoji": "😰"
+        },
+        {
+            "word": "Exciting",
+            "emoji": "😧"
+        },
+        {
+            "word": "Confusing",
+            "emoji": "🤔"
+        },
+        {
             "word": "Unpredictable",
             "emoji": "😲"
+        },
+        {
+            "word": "Mysterious",
+            "emoji": "👹"
+        },
+        {
+            "word": "Inspiring",
+            "emoji": "😃"
+        },
+        {
+            "word": "Hopeful",
+            "emoji": "🤗"
         }
     ],
+    "moods": {
+        "Positive": [
+            {
+                "word": "Happy",
+                "emoji": "😁"
+            },
+            {
+                "word": "Funny",
+                "emoji": "😂"
+            },
+            {
+                "word": "Romantic",
+                "emoji": "😍"
+            }
+        ],
+        "Negative": [
+            {
+                "word": "Sad",
+                "emoji": "😢"
+            },
+            {
+                "word": "Depressing",
+                "emoji": "😔"
+            },
+            {
+                "word": "grim",
+                "emoji": "🤢"
+            }
+        ],
+        "On-edge": [
+            {
+                "word": "Scary",
+                "emoji": "😱"
+            },
+            {
+                "word": "Thrilling",
+                "emoji": "😰"
+            },
+            {
+                "word": "Exciting",
+                "emoji": "😧"
+            }
+        ],
+        "Puzzling": [
+            {
+                "word": "Confusing",
+                "emoji": "🤔"
+            },
+            {
+                "word": "Unpredictable",
+                "emoji": "😲"
+            },
+            {
+                "word": "Mysterious",
+                "emoji": "👹"
+            }
+        ],
+        "Uplifiting": [
+            {
+                "word": "Inspiring",
+                "emoji": "😃"
+            },
+            {
+                "word": "Hopeful",
+                "emoji": "🤗"
+            }
+        ]
+    },
     "OverMoods": [
         {
             "word": "Cheerful",

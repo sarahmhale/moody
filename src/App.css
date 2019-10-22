@@ -5,3 +5,12 @@ h1{
 h2{
   color:#868686;
 }
+
+
+
+@media screen and (max-width: 320px) {
+  h1{
+    font-size: 1em;
+    color: #1B1B1B;
+  }
+}
